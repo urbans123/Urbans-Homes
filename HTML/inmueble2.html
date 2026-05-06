@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas info de inmueble</title>
+     <link rel="stylesheet" href="../CSS/inmuebles2.css">
+   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="icon" href="../IMG/Logo.png">
+</head>
+<body>
+
+          
+<div id="loginModal"
+     style="
+        display: none; position: fixed; top: 50%;left: 50%; transform: translate(-50%, -50%); background: #fff;
+        padding: 1.5rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        z-index: 1000; width: 300px;
+        text-align: center;">
+  
+  <label for="telefono" style="display: block; font-weight: bold; margin-bottom: 0.5rem;">
+    Ingrese su número para reservar:
+  </label>
+  
+  <input type="tel" id="telefono" placeholder="Ej: 3001234567"
+         style="
+            width: 100%; margin-bottom: 1rem; padding: 0.6rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;
+         " />
+
+  <div style="display: flex; justify-content: center; gap: 10px;">
+    <button id="btnEnviar"
+            style="
+              background-color: #007bff;color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer;
+            ">
+      Enviar
+    </button>
+
+    <button id="btnCerrar"
+            style="  background-color: #dc3545; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 6px;
+              cursor: pointer;
+            ">
+      Cerrar
+    </button>
+  </div>
+</div>
+
+<div class="contenedor">
+  <header>
+    <div class="encabezado">
+      <div class="logo">
+        <img src="../IMG/Logo 2.png" alt="Logo Urbano Hogar" class="logo">
+      </div>
+      <div class="titulo">
+        <h1>Urbano Hogar </h1>
+        <h2>Tu aliado en arrendamientos inmobiliarios</h2>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../HTML/index.html">Inicio</a></li>
+        <li><a href="../HTML/Inmuebles.html">Inmuebles</a></li>
+        <li class="dropdown">
+          <button class="dropbtn" aria-expanded="false">Usuarios ▾</button>
+          <ul class="dropdown-content" aria-label="submenu">
+            <li><a href="../HTML/Propietarios.html">Propietarios</a></li>
+            <li><a href="../HTML/Admin.html">Admin</a></li>
+          </ul>
+        </li>
+        <li><a href="../HTML/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+ <div style="position:absolute; top:25px; right:40px; display:flex; align-items:center; gap:10px;">
+  <div id="carritoIcono" style="cursor:pointer; font-size:1.5rem; color:#000;">
+    🛒 <span id="carritoCount"
+             style="background:#f97316; color:white; border-radius:50%; padding:3px 8px; font-size:0.9rem;">
+      0
+    </span>
+  </div>
+  <button id="verCarrito"
+          style="background-color:#f97316; color:white; border:none; padding:6px 12px;
+                 border-radius:8px; cursor:pointer; font-weight:600; font-size:0.9rem;">
+    Ver carrito
+  </button>
+</div>
+
+  </header>
+
+  <div class="bienvenida-container">
+  <h2 id="bienvenida"></h2>
+  <button id="cerrarSesion">Cerrar sesión</button>
+</div>
+
+   <section class="filter-contenedor">
+     <h2 class="texto-inmuebles">MAS INMUEBLES</h2>
+       <div class="botones-inmuebles"> 
+       
+      <button class="filter-btn active" data-filter="all"><p>TODOS</p></button>
+      <button class="filter-btn" data-filter="caro"><p>CAROS</p></button>
+      <button class="filter-btn" data-filter="barato"><p>ECONÓMICOS</p></button>      
+     </div>
+
+       <div class="inmuebles">
+        <div class="card" data-type="caro">
+          <img src="../IMG/Inmueble caro 1.PNG" alt="caro1">
+          
+          
+            <p>Amplia suite principal con baño en mármol,
+             </p>
+
+              <div class="precio">
+                 <h2>Por Noche: $399.999 COP
+               </h2>
+                <h2>Por dia: $500.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+               
+           </div>
+       
+          
+           <div class="card" data-type="barato">
+          <img src="../IMG/23Captura.PNG " alt="barato">
+                    
+          <p>Amplia suite principal con baño en mármol
+                </p>
+
+              <div class="precio">
+                 <h2>Por Noche: $300.000 COP
+               </h2>
+                <h2>Por dia: $360.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+
+        </div>
+          
+        <div class="card" data-type="caro">
+          <img src="../IMG/Inmueble caro 3.PNG" alt="">
+          
+                    <p>Amplia habitacion principal comoda
+              </p>
+
+              <div class="precio">
+                 <h2>Por Noche: $450.000 COP
+               </h2>
+                <h2>Por dia: $550.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+
+        </div>
+        <div class="card" data-type="caro">
+          <img src="../IMG/Inmueble caro 4.PNG" alt="">
+          
+          
+          <p>Espaciosa habitación con paredes en tonos neutros</p>
+
+              <div class="precio">
+                 <h2>Por Noche: $450.000 COP
+               </h2>
+                <h2>Por dia: $500.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+
+        </div>
+         <div class="card" data-type="barato">
+          <img src="../IMG/Inmueble barato 6.PNG" alt="">
+
+          <p>Cuarto económico con baño externo</p>
+
+              <div class="precio">
+                 <h2>Por Noche: $350.000 COP
+               </h2>
+                <h2>Por dia: $400.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+
+        </div>
+       
+        <div class="card" data-type="caro">
+          <img src="../IMG/Inmueble caro 6.PNG" alt="">
+          
+          
+          <p>Habitación con estilo minimalista</p>
+
+              <div class="precio">
+                 <h2>Por Noche: $400.000 COP
+               </h2>
+                <h2>Por dia: $430.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+
+
+        </div>
+        <div class="card" data-type="barato">
+          <img src="../IMG/12Captura.PNG i.PNG" alt="">
+          
+          
+          <p>Habitación privada amoblada con servicios incluidos</p>
+
+              <div class="precio">
+                 <h2>Por Noche: $300.000 COP
+               </h2>
+                <h2>Por dia: $350.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+
+        </div>
+         
+        <div class="card" data-type="barato">
+          <img src="../IMG/Inmueble barato 2.PNG" alt="">
+          
+          
+          <p>Espacio económico con cama doble</p>
+
+              <div class="precio">
+                 <h2>Por Noche: $310.000 COP
+               </h2>
+                <h2>Por dia: $350.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+
+        </div>
+        <div class="card" data-type="barato">
+          <img src="../IMG/Inmueble barato 3.PNG" alt="">
+          
+          
+          <p>Amplia suite principal con baño en mármol,
+             </p>
+
+              <div class="precio">
+                 <h2>Por Noche: $200.000 COP
+               </h2>
+                <h2>Por dia: $270.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+
+
+        </div>
+        <div class="card" data-type="barato">
+          <img src="../IMG/Inmueble barato 4.PNG" alt="">
+          
+          
+          <p>Habitación funcional con ventilación natural</p>
+          
+              <div class="precio">
+                 <h2>Por Noche: $300.000 COP
+               </h2>
+                <h2>Por dia: $350.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+
+        </div>
+        <div class="card" data-type="barato">
+          <img src="../IMG/Inmueble barato 5.PNG" alt="">
+          
+          
+          <p>Elegante habitación principal con baño privado</p>
+
+              <div class="precio">
+                 <h2>Por Noche: $300.000 COP
+               </h2>
+                <h2>Por dia: $350.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+   
+        </div>
+         <div class="card" data-type="caro">
+          <img src="../IMG/Inmueble caro 5.PNG" alt="">
+          
+          
+          <p>Amplia habitación con diseño moderno</p>
+
+              <div class="precio">
+                 <h2>Por Noche: $400.000 COP
+               </h2>
+                <h2>Por dia: $450.000 COP
+
+                </h2>
+                <button>Reservar</button>
+             
+              </div>
+    
+
+        </div>
+       </div>
+       </div>
+
+   </section>
+
+   <inferior class="class">
+    <footer>
+    <p class="p7">&copy; 2025 Urbano Hogar. Todos los derechos reservados.</p>
+  </footer>
+       </inferior>
+    
+</div>
+          <script src="../Js/inmueble.js"></script>
+</body>
+</html>
+
+
+ 

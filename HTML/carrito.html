@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Reservas - Urbano Hogar</title>
+  <link rel="stylesheet" href="../CSS/Estilos.css">
+  <link rel="icon" href="../IMG/Logo.png">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #fff; margin: 0; }
+    header { background-color: #f9a647; padding: 15px; text-align: center; color: black; }
+    h1 { margin: 0; font-size: 1.8rem; }
+    .contenedor { padding: 30px; max-width: 900px; margin: 0 auto; }
+    ul { list-style: none; padding: 0; }
+    li { background: #fef4e5; margin: 10px 0; padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+    button { background-color: #f97316; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; }
+    button:hover { background-color: #e65c00; }
+    #vaciarCarrito { background: #dc3545; }
+    #vaciarCarrito:hover { background: #b02a37; }
+    footer { text-align: center; margin-top: 40px; color: #555; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mis Reservas 🏡</h1>
+</header>
+
+<div class="contenedor">
+  <ul id="listaCarrito"></ul>
+
+  <div style="text-align:center; margin-top:20px;">
+    <button id="vaciarCarrito">Vaciar carrito</button>
+    <button onclick="window.location.href='../HTML/inmueble2.html'">Volver a Inmuebles</button>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Urbano Hogar. Todos los derechos reservados.</p>
+</footer>
+
+<script src="../Js/inmueble.js"></script>
+</body>
+</html>

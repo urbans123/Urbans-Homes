@@ -1,0 +1,405 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+header {
+  background-color: #f9a647;
+  color: white;
+  padding: 0px;
+  height: 120px;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.logo {
+  flex: 0 0 auto;
+  max-width: 150px;
+}
+
+.logo img {
+  height: 150px;
+  max-height: 150px;
+  width: 150px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  top: -27px;
+  left: -18px;
+}
+
+.titulo {
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+  text-decoration: none;
+}
+
+.titulo h1 {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  margin-left: 308px;
+  text-decoration: none;
+  top: 40px;
+  position: absolute;
+}
+
+.titulo h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-left: 250px;
+  font-weight: 800;
+  text-decoration: none;
+  position: absolute;
+  top: 82px;
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: -123px;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-left: 900px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Dropdown styles for the header nav */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  border: none;
+  color: rgb(0,0,0);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  list-style: none;
+  padding: 8px 0;
+  margin: 8px 0 0 0;
+  z-index: 999;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 8px 16px;
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.dropdown-content li a:hover {
+  background: #f9a647;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Show dropdown on hover and when focused for keyboard users */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+
+.filter{
+  padding-top: 30px;
+  text-align: center;
+}
+
+.texto-inmuebles{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  top: 30px; 
+}
+
+.botones-inmuebles{
+  position: relative;
+  left: 600px;
+  padding: 30px 30px 30px 0;
+
+}
+
+.botones-inmuebles p{
+  background-color: #f9a647;
+  font-size: 20px;
+  padding: 7px;
+}
+
+.inmuebles{
+  display: flex ;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  padding-left: 70px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  border-radius: 10px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+
+.precio{
+  padding: 20px;
+}
+
+.precio button{
+  padding: 20px;
+  font-size: 20px;
+  background-color: #f9a647;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.card img{
+  border-radius: 0px;
+  width: 300px;
+  height: 300px;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  align-content: flex-end;
+  position: absolute;
+  width: 100%;
+  height: 20px;
+}
+
+.p7{
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  left: 35%;
+  position: absolute;
+}
+
+#loginModal button {
+  background-color: #f9a647;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#loginModal button:hover {
+  background-color: #e9c8b5;
+}
+
+#btnEnviar {
+  background-color: #fc8600;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btnEnviar:hover {
+  background-color: #5c5c5c;
+}
+
+#btnCerrar {
+  background-color: #ff8800;
+  color: #333;
+  margin-left: 0.5rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#btnCerrar:hover {
+  background-color: #5c5c5b;
+  color: white;
+}
+
+.card button {
+  background-color: #f97316; 
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+  background-color: #d95c13; 
+  transform: scale(1.05);
+}
+
+.card button:active {
+  transform: scale(0.95);
+}
+
+.bienvenida-container {
+  text-align: center;
+  margin-top: 25px;      
+  margin-bottom: 35px;   
+}
+
+#bienvenida {
+  color: #f57c00;
+  font-size: 1.7rem;     
+  margin-bottom: 12px;   
+  font-family: 'Playfair', serif;
+}
+
+#cerrarSesion {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 22px;    
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+#cerrarSesion:hover {
+  background: #e65c00;
+}
+
+
+
+@media (max-width: 992px) {
+  .titulo h1 {
+    font-size: 1.6rem;
+  }
+
+  .titulo h2 {
+    font-size: 1rem;
+  }
+
+  .inmuebles {
+    justify-content: center;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  header {
+    height: auto;
+    text-align: center;
+  }
+
+
+ .encabezado {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 100px;
+    width: 100px;
+    top: 0;
+    left: 0;
+  }
+
+  .titulo h1 {
+    font-size: 1.5rem;
+    margin-left: 0;
+    position: relative;
+  }
+
+  .titulo h2 {
+    position: relative;
+    font-size: 0.9rem;
+    margin-left: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .texto-inmuebles {
+    font-size: 30px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .botones-inmuebles {
+    left: 0;
+    padding: 10px;
+  }
+
+  footer {
+    position: relative;
+  }
+}

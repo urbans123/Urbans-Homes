@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urbano Hogar - Admin</title>
+  <link rel="stylesheet" href="../CSS/Admin.css">
+  <link rel="icon" href="../IMG/Logo.png">
+</head>
+<body>
+  <div class="Contenedor">
+    <!-- ============ HEADER ============ -->
+    <header>
+      <div class="logo">
+        <img src="../IMG/Logo 2.png" alt="Logo Urbano Hogar">
+      </div>
+      <div class="titulo">
+        <h1>Urbano Hogar</h1>
+        <h2>Panel de Administración</h2>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="../HTML/index.html">Inicio</a></li>
+          <li><a href="../HTML/Inmuebles.html">Inmuebles</a></li>
+          <li class="dropdown">
+            <button class="dropbtn" aria-expanded="false">Usuarios ▾</button>
+            <ul class="dropdown-content" aria-label="submenu">
+              <li><a href="../HTML/Propietarios.html">Propietarios</a></li>
+              <li><a href="../HTML/Admin.html">Admin</a></li>
+            </ul>
+          </li>
+          <li><a href="../HTML/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ============ MAIN ============ -->
+    <main>
+      <h1 class="tituloLogin">Acceso Administrativo</h1>
+
+      <div class="contenedorMenu">
+        <h2 class="tituloForm">Iniciar Sesión</h2>
+
+        <form id="formAdminLogin">
+          <div class="group">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" placeholder="Correo de administrador">
+          </div>
+
+          <div class="group">
+            <label for="clave">Contraseña</label>
+            <input type="password" id="clave" placeholder="••••••••">
+          </div>
+
+          <button type="submit">Ingresar</button>
+        </form>
+
+        <p id="mensajeLogin" style="color:red; font-weight:bold;"></p>
+      </div>
+    </main>
+
+    
+    <footer>
+      <p>&copy; 2025 Urbano Hogar. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+ 
+  <script src="../Js/Admin.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+header {
+  background-color: #f9a647;
+  color: white;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  margin-left: 50px;
+}
+
+.logo img {
+ height: 150px;
+  max-height: 150px;
+  width: 150px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  top: 27px;
+  left: -48px;
+}
+
+.titulo {
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+}
+
+.titulo h1 {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  margin-left: 137px;
+  text-decoration: none;
+  
+}
+.titulo h2 {
+ font-size: 20px;
+  font-weight: normal;
+  margin-left: 137px;
+  font-weight: 800;
+  text-decoration: none;
+  color: black;
+ 
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+main.contenedor {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: rgb(191, 179, 179);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 0 auto;
+  overflow: hidden;
+}
+.tituloLogin{
+    font-family: 'Segoe UI', sans-serif;
+    color:rgb(255, 89, 0);
+    font-size: 40px;
+}
+.contenedorMenu{
+    border: 3px solid rgb(255, 106, 0);
+    width: 500px;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+   
+}
+.tituloForm{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 30px;
+
+}
+form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+}
+input{
+    height: 40px;
+    width: 200px;
+}
+.group{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+button{
+    background-color: rgb(255, 89, 0);
+    color: white;
+    width: 150px;
+    height: 50px;
+    border:none;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: auto;
+  
+}
+
+@media screen and (max-width: 600px) {
+  .contenedorMenu {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .tituloLogin {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .tituloForm {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  border: none;
+  color: #111;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  list-style: none;
+  padding: 8px 0;
+  margin: 8px 0 0 0;
+  z-index: 999;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 8px 16px;
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.dropdown-content li a:hover {
+  background: #f9a647;
+  color: white;
+  border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}

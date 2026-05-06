@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Admin</title>
+  <link rel="stylesheet" href="../CSS/AdminPanel.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li class="active">🏠 Dashboard</li>
+        <li>👤 Usuarios</li>
+        <li>📦 Productos</li>
+        <li>🧾 Pedidos</li>
+        <li>📊 Reportes</li>
+        <li>⚙️ Configuración</li>
+      </ul>
+      <button id="logoutAdmin" class="logout">Cerrar sesión</button>
+    </aside>
+
+    <main class="main-content">
+      <header class="header">
+        <input type="text" placeholder="Buscar...">
+        <div class="profile">
+          <span id="saludoAdmin">Admin</span>
+          <img src="https://i.pravatar.cc/40" alt="Usuario">
+        </div>
+      </header>
+
+      <section class="stats">
+        <div class="card">
+          <h3>$ 32.984</h3>
+          <p>Ventas totales</p>
+        </div>
+        <div class="card">
+          <h3>1.200</h3>
+          <p>Usuarios activos</p>
+        </div>
+        <div class="card">
+          <h3>560</h3>
+          <p>Productos disponibles</p>
+        </div>
+        <div class="card">
+          <h3>150</h3>
+          <p>Pedidos pendientes</p>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button class="btn-primary">Agregar usuario</button>
+        <button class="btn-secondary">Generar reporte</button>
+      </div>
+
+      <section class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Estado</th>
+              <th>Fecha de registro</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kernz Marnuea</td>
+              <td>margo@media.com</td>
+              <td><span class="estado activo">Activo</span></td>
+              <td>2024-03-31</td>
+              <td>✏️ 🗑️</td>
+            </tr>
+            <tr>
+              <td>Jorge Fereyra</td>
+              <td>jorge@rededal.com</td>
+              <td><span class="estado inactivo">Inactivo</span></td>
+              <td>2024-03-29</td>
+              <td>✏️ 🗑️</td>
+            </tr>
+            <tr>
+              <td>Matth Wilgness</td>
+              <td>marth@wrligner.com</td>
+              <td><span class="estado activo">Activo</span></td>
+              <td>2024-03-28</td>
+              <td>✏️ 🗑️</td>
+            </tr>
+            <tr>
+              <td>Emarius Naran</td>
+              <td>emglans@cne.com</td>
+              <td><span class="estado inactivo">Inactivo</span></td>
+              <td>2024-03-26</td>
+              <td>✏️ 🗑️</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="../Js/Admin.js"></script>
+  <script src="../Js/dashboard.js"></script>
+</body>
+</html>
