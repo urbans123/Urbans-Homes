@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const user = document.getElementById('usuario').value.trim();
     const pass = document.getElementById('clave').value.trim();
 
-    // Validación simple (para demo)
     if (user === 'propietario' && pass === '1234') {
       localStorage.setItem('propietarioLogueado', JSON.stringify({usuario: user}));
       const cont = document.querySelector('.contenedorMenu');
