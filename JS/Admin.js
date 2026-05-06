@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formAdminLogin");
   const mensaje = document.getElementById("mensajeLogin");
 
-  // LOGIN DEL ADMIN
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -18,13 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // PROTECCIÓN DE ACCESO EN PANEL
   const adminActivo = localStorage.getItem("adminActivo");
   if (!adminActivo && window.location.pathname.includes("AdminPanel.html")) {
     window.location.href = "../HTML/Admin.html";
   }
 
-  // SALUDO Y LOGOUT EN PANEL
   const saludo = document.getElementById("saludoAdmin");
   const logout = document.getElementById("logoutAdmin");
 
