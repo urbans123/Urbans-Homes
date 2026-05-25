@@ -1,0 +1,50 @@
+.carrito-hero {
+  background: linear-gradient(
+    135deg,
+    var(--clr-darker) 0%,
+    var(--clr-dark) 100%
+  );
+  color: #fff;
+  padding: 8rem 2rem 4rem;
+  margin-top: 68px;
+  text-align: center;
+}
+
+.carrito-hero .hero-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.carrito-hero .hero-content p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.carrito-section {
+  background: var(--clr-bg);
+  padding: 5rem 0;
+}
+
+.carrito-empty {
+  text-align: center;
+  padding: 3rem;
+  background: var(--clr-surface);
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--clr-border);
+}
+
+.carrito-empty h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--clr-dark);
+  margin-bottom: 1rem;
+}
+
+.carrito-empty p {
+  color: var(--clr-muted);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
