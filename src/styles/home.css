@@ -1,0 +1,310 @@
+.porque {
+  background: var(--clr-bg);
+}
+
+.porque-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.porque-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.porque-card.reverse {
+  direction: rtl;
+}
+
+.porque-card.reverse > * {
+  direction: ltr;
+}
+
+.porque-img {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 320px;
+  box-shadow: var(--shadow-md);
+}
+
+.porque-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.porque-img:hover img {
+  transform: scale(1.04);
+}
+
+.porque-num {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--clr-border);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.porque-text h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--clr-dark);
+  margin-bottom: 0.75rem;
+}
+
+.porque-text p {
+  color: var(--clr-muted);
+  line-height: 1.75;
+}
+
+.servicios {
+  background: var(--clr-light);
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.servicio-card {
+  background: var(--clr-surface);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  border: 1px solid var(--clr-border);
+  transition:
+    box-shadow var(--transition),
+    transform var(--transition);
+  text-align: center;
+}
+
+.servicio-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.servicio-card.featured {
+  background: var(--clr-dark);
+  color: #fff;
+  border-color: var(--clr-dark);
+}
+
+.servicio-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.servicio-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin: 0 auto 1rem;
+}
+
+.servicio-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.servicio-card.featured h3 {
+  color: #fff;
+}
+
+.servicio-card p {
+  color: var(--clr-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.servicio-card.featured p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.servicios-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.destacadas {
+  background: var(--clr-bg);
+}
+
+.prop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.destacadas-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonios {
+  background: var(--clr-light);
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonio-card {
+  background: var(--clr-surface);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-border);
+  transition:
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.testimonio-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.testimonio-card.featured {
+  background: var(--clr-dark);
+  color: #fff;
+  border-color: var(--clr-dark);
+}
+
+.testimonio-card p {
+  color: var(--clr-muted);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.testimonio-card.featured p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.testimonio-autor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.testimonio-card.featured .avatar {
+  background: rgba(200, 147, 58, 0.3);
+}
+
+.testimonio-autor strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--clr-dark);
+}
+
+.testimonio-card.featured .testimonio-autor strong {
+  color: #fff;
+}
+
+.testimonio-autor small {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--clr-muted);
+}
+
+.testimonio-card.featured .testimonio-autor small {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-final {
+  background: linear-gradient(
+    135deg,
+    var(--clr-darker) 0%,
+    var(--clr-dark) 100%
+  );
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+}
+
+.cta-inner p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+.cta-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .porque-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .porque-card.reverse {
+    direction: ltr;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prop-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .testimonios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .prop-grid {
+    grid-template-columns: 1fr;
+  }
+}
