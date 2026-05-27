@@ -7,6 +7,9 @@ import Contacto from "./pages/Contacto";
 import Nosotros from "./pages/Nosotros";
 import Login from "./pages/Login";
 import Carrito from "./pages/Carrito";
+import DashboardAdmin from "./pages/DashboardAdmin";
+import DashboardEmpleado from "./pages/DashboardEmpleado";
+import DashboardPropietario from "./pages/DashboardPropietario";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/login" element={<Login />} />
           <Route path="/carrito" element={<Carrito />} />
+          <Route path="/dashboard-admin" element={<DashboardAdmin />} />
+          <Route path="/dashboard-empleado" element={<DashboardEmpleado />} />
+          <Route path="/dashboard-propietario" element={<DashboardPropietario />} />
         </Routes>
       </main>
       <Footer />

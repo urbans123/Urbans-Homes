@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [usuario, setUsuario] = useState(null);
+  const [rol, setRol] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,8 +18,39 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Detectar si hay usuario logueado
+  useEffect(() => {
+    const usuarioGuardado = localStorage.getItem("uh_usuario");
+    const rolGuardado = localStorage.getItem("uh_rol");
+    const nombreGuardado = localStorage.getItem("uh_nombre");
+
+    if (usuarioGuardado && rolGuardado) {
+      setUsuario(nombreGuardado || usuarioGuardado);
+      setRol(rolGuardado);
+    }
+  }, []);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("uh_usuario");
+    localStorage.removeItem("uh_rol");
+    localStorage.removeItem("uh_nombre");
+    localStorage.removeItem("uh_carrito");
+    setUsuario(null);
+    setRol(null);
+    navigate("/");
+  };
+
+  const getDashboardRoute = () => {
+    const routes = {
+      admin: "/dashboard-admin",
+      empleado: "/dashboard-empleado",
+      propietario: "/dashboard-propietario",
+    };
+    return routes[rol] || "/";
   };
 
   return (
@@ -41,12 +75,38 @@ export default function Navbar() {
           </Link>
         </nav>
         <div className="nav-actions">
-          <Link to="/login" className="btn-outline">
-            Ingresar
-          </Link>
-          <Link to="/propiedades" className="btn-primary">
-            Ver Inmuebles
-          </Link>
+          {usuario ? (
+            <>
+              <Link
+                to={getDashboardRoute()}
+                className="btn-primary"
+                style={{ textDecoration: "none" }}
+              >
+                📊 {usuario} ({rol})
+              </Link>
+              <button
+                onClick={handleLogout}
+                className="btn-outline"
+                style={{
+                  background: "#e74c3c",
+                  color: "white",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+              >
+                Cerrar Sesión
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="btn-outline">
+                Ingresar
+              </Link>
+              <Link to="/propiedades" className="btn-primary">
+                Ver Inmuebles
+              </Link>
+            </>
+          )}
         </div>
         <button
           className="hamburger"
@@ -64,7 +124,28 @@ export default function Navbar() {
           <Link to="/propiedades">Propiedades</Link>
           <Link to="/nosotros">Nosotros</Link>
           <Link to="/contacto">Contacto</Link>
-          <Link to="/login">Ingresar</Link>
+          {usuario ? (
+            <>
+              <Link to={getDashboardRoute()}>Mi Dashboard</Link>
+              <button
+                onClick={handleLogout}
+                style={{
+                  width: "100%",
+                  padding: "0.8rem",
+                  background: "#e74c3c",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                  marginTop: "1rem",
+                }}
+              >
+                Cerrar Sesión
+              </button>
+            </>
+          ) : (
+            <Link to="/login">Ingresar</Link>
+          )}
         </div>
       )}
     </header>
